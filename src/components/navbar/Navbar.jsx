@@ -41,6 +41,9 @@ const Navbar = () => {
           <div className="gap-4">
             <Link to={"/login"} className="px-3 py-2 bg-white  text-black rounded-full hover:bg-red-700">Login</Link>
           </div>
+          <div className="gap-4">
+            <Link to={"/sign_up"} className="px-3 py-2 bg-white  text-black rounded-full hover:bg-red-700">Signup</Link>
+          </div>
         
          
         </div>
