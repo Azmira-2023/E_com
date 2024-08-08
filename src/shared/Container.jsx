@@ -1,9 +1,17 @@
 
 
-const Container = () => {
-  return (
-    <div>Container</div>
-  )
-}
+import PropTypes from "prop-types";
 
-export default Container
+const Container = ({ children }) => {
+    return (
+        <section className="container mx-auto lg:px-16 px-4">
+            {children}
+        </section>
+    );
+};
+
+export default Container;
+
+Container.propTypes = {
+    children: PropTypes.node,
+};
