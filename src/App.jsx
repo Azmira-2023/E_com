@@ -1,9 +1,16 @@
+// App.js
+import React from 'react';
+import { CartProvider } from './context/CartContext'; // Adjust the path as needed
+import Product from './components/product/Product';
 
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <CartProvider>
+      <Product />
+   
+    </CartProvider>
+  );
 }
 
-export default App
+export default App;

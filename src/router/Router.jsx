@@ -14,6 +14,7 @@ import Product from "@/components/product/Product";
 
 
 
+
 const Router = createBrowserRouter([
     {
         path: "/",
@@ -43,7 +44,6 @@ const Router = createBrowserRouter([
                 path: "/products",
                 element: <Product />,
             },
-           
             // {
             //     path: "/cart",
             //     element: <CartPage />,

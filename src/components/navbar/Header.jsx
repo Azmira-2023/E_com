@@ -5,7 +5,6 @@ import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 
-
 const Header = () => {
   return (
    
@@ -30,8 +29,6 @@ const Header = () => {
         <div className="flex items-center gap-8">
           <div className="text-3xl cursor-pointer text-black">
           <FaUser />
-     
-
           </div>
           <div className="text-3xl relative">
             <span>  <FaShoppingCart className="text-black"/> </span>
@@ -45,9 +42,7 @@ const Header = () => {
           </div>
           <div className="gap-4">
             <Link to={"/sign_up"} className="px-3 py-2 bg-black text-white rounded-full hover:bg-red-700">Signup</Link>
-          </div>
-        
-         
+          </div>      
         </div>
       </div>
     </header>
