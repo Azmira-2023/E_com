@@ -9,6 +9,8 @@ import FastDelivery from "@/components/company/FastDelivery";
 import SuperDeals from "@/components/company/SuperDeals";
 import Reward from "@/components/company/Reward";
 import Product from "@/components/product/Product";
+import Shop from "@/components/shop/Shop";
+import ProductDetails from "@/components/shop/ProductDetails";
 // import CartPage from "@/components/cart/CartPage";
 
 
@@ -44,10 +46,15 @@ const Router = createBrowserRouter([
                 path: "/products",
                 element: <Product />,
             },
-            // {
-            //     path: "/cart",
-            //     element: <CartPage />,
-            // },
+            {
+                path: "/product/:id",
+                element: <ProductDetails />,
+            },
+            
+            {
+                path: "/shop",
+                element: <Shop />,
+            },
            
             {
                 path: "/login",

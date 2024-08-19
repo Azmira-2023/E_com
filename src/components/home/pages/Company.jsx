@@ -4,12 +4,11 @@ import { Link } from 'react-router-dom';
 const Company = () => {
   return (
     <div className='mt-4 p-4'>
- 
-      <div className='flex justify-between mt-4'>
+      <div className='flex flex-col md:flex-row justify-between gap-4 mt-4'>
         {/* Fast Delivery Section */}
-        <div className='flex flex-col items-center border p-4 w-1/3'>
+        <div className='flex flex-col items-center border p-4 w-full md:w-1/3'>
           <svg
-            className='w-16 h-24 text-blue-500'
+            className='w-16 h-16 text-blue-500'
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'
@@ -24,7 +23,8 @@ const Company = () => {
           </svg>
           <p className='text-lg font-semibold mt-2'>Fast Delivery</p>
           <p className='p-4 text-center'>
-          Get Fast and hassle-free delivery <br></br> of your orders to your doorstep.<br></br> Ensuring a seamless and<br></br> hassle-free experience
+            Get Fast and hassle-free delivery <br /> of your orders to your doorstep.
+            Ensuring a seamless and <br /> hassle-free experience
           </p>
           <Link to="/fast-delivery">
             <button className='mt-2 px-4 py-2 underline text-black rounded'>Learn More</button>
@@ -32,7 +32,7 @@ const Company = () => {
         </div>
 
         {/* Super Deals Section */}
-        <div className='flex flex-col items-center border p-4 w-1/3'>
+        <div className='flex flex-col items-center border p-4 w-full md:w-1/3'>
           <svg
             className='w-16 h-16 text-green-500'
             fill='none'
@@ -48,16 +48,16 @@ const Company = () => {
             />
           </svg>
           <p className='text-lg font-semibold mt-6'>Super Deals</p>
-          <p className='text-center'>Stay updated on all our latest news,<br></br> offers, and campaigns.</p>
+          <p className='text-center'>Stay updated on all our latest news,<br /> offers, and campaigns.</p>
           <Link to="/super-deals">
-            <button className='mt-32 px-4 py-2 underline text-black rounded'>Learn More</button>
+            <button className='mt-8 md:mt-32 px-4 py-2 underline text-black rounded'>Learn More</button>
           </Link>
         </div>
 
         {/* Rewards Section */}
-        <div className='flex flex-col items-center border p-4 w-1/3'>
+        <div className='flex flex-col items-center border p-4 w-full md:w-1/3'>
           <svg
-            className='w-12 h-24 text-yellow-500'
+            className='w-12 h-12 text-yellow-500'
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'
@@ -71,14 +71,14 @@ const Company = () => {
             />
           </svg>
           <p className='text-lg font-semibold mt-2'>Rewards</p>
-          <p className='text-center'>Unlock a world of exciting<br></br> benefits with Apex Rewards <br></br> loyalty program.</p>
+          <p className='text-center'>Unlock a world of exciting <br /> benefits with Apex Rewards <br /> loyalty program.</p>
           <Link to="/rewards">
-            <button className='mt-16 px-4 py-2  text-black underline rounded'>Learn More</button>
+            <button className='mt-8 md:mt-16 px-4 py-2 text-black underline rounded'>Learn More</button>
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Company;
