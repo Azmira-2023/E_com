@@ -11,6 +11,7 @@ import Reward from "@/components/company/Reward";
 import Product from "@/components/product/Product";
 import Shop from "@/components/shop/Shop";
 import ProductDetails from "@/components/shop/ProductDetails";
+import SearchResult from "@/components/searchresult/SearchResult";
 // import CartPage from "@/components/cart/CartPage";
 
 
@@ -49,6 +50,10 @@ const Router = createBrowserRouter([
             {
                 path: "/product/:id",
                 element: <ProductDetails />,
+            },
+            {
+                path: "/search",
+                element: <SearchResult />,
             },
             
             {

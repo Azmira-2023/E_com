@@ -9,8 +9,8 @@ import {
 
 const Footer = () => {
   return (
-    <div className="relative bg-black py-12 text-white mt-24">
-      <div className="container absolute top-0 h-1/4 bg-indigo-400 -translate-y-1/2 transform mx-auto sm:mx-10 md:mx-20 lg:mx-60">
+    <div className="relative bg-black py-8 text-white mt-24">
+      <div className="container absolute top-0 h-1/3 bg-indigo-400 -translate-y-1/2 transform mx-auto sm:mx-10 md:mx-20 lg:mx-60">
         <div className="container mx-auto py-2 px-4 sm:px-6 md:px-12 flex flex-col sm:flex-row justify-between items-center h-full">
           <div className="text-center sm:text-left">
             <p className="text-lg sm:text-xl">Ready for Your next Shopping Destination.</p>
