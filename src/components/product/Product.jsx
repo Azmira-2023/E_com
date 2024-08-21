@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useCart } from "../../context/CartContext"
 import { Link } from 'react-router-dom';
 import p1 from "../../assets/product/p1.png";
 import p2 from '../../assets/product/p2.png';
@@ -36,7 +35,7 @@ const Product = () => {
     { _id: '9', name: 'Product 9', price: '$100', image: 'p9', description: 'This is a short description of product 9.' },
   ]);
 
-  const { addToCart } = useCart();
+ 
   console.log({ addToCart });
 
   return (

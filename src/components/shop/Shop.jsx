@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Shop = () => {
   const [data, setData] = useState([]);
@@ -7,6 +7,7 @@ const Shop = () => {
   const [loading, setLoading] = useState(false);
   const [cart, setCart] = useState([]);
   let componentMounted = true;
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getProducts = async () => {
@@ -38,6 +39,11 @@ const Shop = () => {
 
   const addProductToCart = (product) => {
     setCart([...cart, product]);
+    navigate("/cart"); // Navigate to the cart page
+  };
+
+  const removeFromCart = (id) => {
+    setCart(cart.filter((item) => item.id !== id));
   };
 
   const Loading = () => (

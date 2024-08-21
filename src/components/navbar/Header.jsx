@@ -6,7 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ cart }) => {
   const [searchQuery, setSearchQuery] = useState(""); // State for search input
   const navigate = useNavigate();
 
@@ -54,8 +54,9 @@ const Header = () => {
             <span>
               <FaShoppingCart className="text-black" />
             </span>
+            {/* Display the cart item count */}
             <div className="bg-red-600 text-black w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-2">
-              <p className="text-xs">0</p>
+              <p className="text-xs">{cart.length}</p>
             </div>
           </div>
           <div className="gap-4">
