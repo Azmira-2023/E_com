@@ -35,8 +35,11 @@ const Product = () => {
     { _id: '9', name: 'Product 9', price: '$100', image: 'p9', description: 'This is a short description of product 9.' },
   ]);
 
- 
-  console.log({ addToCart });
+  const addToCart = (product) => {
+    // Logic to add product to cart
+    console.log(`Added to cart: ${product.name}`);
+    // You can add more code here to handle adding the product to the cart, like updating state or sending it to a backend
+  };
 
   return (
     <div className="p-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-transform hover:transition-transform">
@@ -54,14 +57,12 @@ const Product = () => {
               <h1 className="text-2xl font-bold mb-4">{product.name}</h1>
               <p className="text-gray-700 mb-4">{product.description}</p>
               <p className="text-xl font-bold mb-4">{product.price}</p>
-              <Link to={"/cart"}>
               <button
                 onClick={() => addToCart(product)}
                 className="bg-black text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
               >
                 Add to Cart
               </button>
-              </Link>
               <Link to={"/cart"} className="block mt-4 text-blue-500">
                 View Cart
               </Link>

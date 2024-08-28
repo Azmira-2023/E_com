@@ -12,7 +12,7 @@ import Product from "@/components/product/Product";
 import Shop from "@/components/shop/Shop";
 import ProductDetails from "@/components/shop/ProductDetails";
 import SearchResult from "@/components/searchresult/SearchResult";
-import Cart from "@/components/cart/Cart";
+// import Cart from "@/components/cart/Cart";
 // import CartPage from "@/components/cart/CartPage";
 
 
@@ -61,10 +61,10 @@ const Router = createBrowserRouter([
                 path: "/shop",
                 element: <Shop />,
             },
-            {
-                path: "/cart",
-                element: <Cart />,
-            },
+            // {
+            //     path: "/cart",
+            //     element: <Cart />,
+            // },
            
             {
                 path: "/login",

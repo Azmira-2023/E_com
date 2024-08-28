@@ -6,26 +6,27 @@ const Shop = () => {
   const [filter, setFilter] = useState([]);
   const [loading, setLoading] = useState(false);
   const [cart, setCart] = useState([]);
-  let componentMounted = true;
   const navigate = useNavigate();
 
   useEffect(() => {
+    let isMounted = true;
+
     const getProducts = async () => {
       setLoading(true);
       const response = await fetch("https://fakestoreapi.com/products/");
-      if (componentMounted) {
+      if (isMounted) {
         const fetchedData = await response.clone().json();
         setData(fetchedData);
         setFilter(fetchedData);
         setLoading(false);
       }
-
-      return () => {
-        componentMounted = false;
-      };
     };
 
     getProducts();
+
+    return () => {
+      isMounted = false; // Cleanup function to prevent memory leaks
+    };
   }, []);
 
   const filterProduct = (category) => {
@@ -39,7 +40,7 @@ const Shop = () => {
 
   const addProductToCart = (product) => {
     setCart([...cart, product]);
-    navigate("/cart"); // Navigate to the cart page
+    navigate("/cart"); // Navigate to the cart page after adding the product
   };
 
   const removeFromCart = (id) => {
@@ -53,7 +54,7 @@ const Shop = () => {
   const ShowProducts = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {filter.map((product) => (
-        <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden ">
+        <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
           <img
             className="w-full h-fit object-cover p-8 mt-2"
             src={product.image}
@@ -61,10 +62,10 @@ const Shop = () => {
           />
           <div className="p-4">
             <h5 className="text-lg font-semibold mb-2">
-              {product.title.substring(0, 12)}...
+              {product.title.substring(0, 12)}
             </h5>
             <p className="text-gray-700 mb-4">
-              {product.description.substring(0, 90)}...
+              {product.description.substring(0, 90)}
             </p>
             <ul className="mb-4">
               <li className="text-lg font-bold">$ {product.price}</li>

@@ -56,7 +56,7 @@ const Header = ({ cart }) => {
             </span>
             {/* Display the cart item count */}
             <div className="bg-red-600 text-black w-5 h-5 rounded-full p-1 flex items-center justify-center absolute -top-2 -right-2">
-              <p className="text-xs">{cart.length}</p>
+              <p className="text-xs">{cart}</p>
             </div>
           </div>
           <div className="gap-4">
